@@ -1,0 +1,24 @@
+{
+    "name": "world-cup-stats",
+    "type": "module",
+    "version": "1.0.0",
+    "description": "Scraper for stats of world cup qatar 2022",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "",
+        "url": "yes"
+    },
+    "author": "Olivier Bitter",
+    "license": "ISC",
+    "devDependencies": {
+        "eslint": "^8.29.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-config-standard": "^17.0.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-n": "^15.6.0",
+        "eslint-plugin-promise": "^6.1.1"
+    }
+}
