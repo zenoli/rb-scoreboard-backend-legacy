@@ -1,7 +1,7 @@
 async function fetchAssists() {
   const normalized = "Dušan Tadić"
     .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "");
+    .replace(/[\u0300-\u036f]/g, "")
   const response = await fetch(
     "https://www.weltfussball.com/assists/wm-2022-in-katar/",
     {
@@ -23,7 +23,7 @@ async function fetchAssists() {
       referrerPolicy: "strict-origin-when-cross-origin",
       body: null,
       method: "GET",
-    }
-  );
-  return await response.text();
+    },
+  )
+  return await response.text()
 }
