@@ -1,4 +1,7 @@
-async function fetchAssists() {
+import cheerio from "cheerio"
+import pretty from "pretty"
+
+export async function fetchAssists() {
   const normalized = "Dušan Tadić"
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
@@ -27,3 +30,14 @@ async function fetchAssists() {
   )
   return await response.text()
 }
+
+async function main() {
+  const assists = await fetchAssists()
+
+  const $ = cheerio.load(assists)
+  const assistsPretty = pretty($.html())
+  const table = $("table")
+  console.log(table)
+}
+
+// main()
