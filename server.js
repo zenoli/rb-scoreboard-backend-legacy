@@ -2,10 +2,12 @@ import express from "express"
 import * as cheerio from "cheerio"
 import { fetchAssistsPage } from "./assists.js"
 import { normalizeString, selectors } from "./utils.js"
+import cors from "cors"
 
 const app = express()
 const port = 3000
 
+app.use(cors());
 
 app.get("/", (req, res) => res.send("Hello World"))
 
