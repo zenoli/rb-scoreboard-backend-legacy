@@ -36,6 +36,8 @@ app.get("/assists", async (req, res) => {
       "tr",
     ]),
   )
+  console.log("assists hit")
+
   const parsedAssists = $(trs)
     .map((_, e) => {
       const tds = $(e).find("td")
