@@ -13,7 +13,7 @@
     "login": "$npm_package_config_railway login",
     "logout": "$npm_package_config_railway logout",
     "dev": "$npm_package_config_railway run $npm_package_config_nodemon ./src/js/server.js",
-    "reset-db": "$npm_package_config_railway run ./scripts/initialize-db.sh"
+    "initialize-db": "$npm_package_config_railway run ./scripts/initialize-db.sh"
   },
   "repository": {
     "type": "",
