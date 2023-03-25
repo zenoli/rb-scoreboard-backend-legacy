@@ -18,7 +18,7 @@ mongoimport \
     --port="$MONGOPORT" \
     --username="$MONGOUSER" \
     --password="$MONGOPASSWORD" \
-    --db "test" \
+    --db "qatar-2022" \
     --collection "matches" \
     --file "$json_location" \
     --authenticationDatabase="admin" \

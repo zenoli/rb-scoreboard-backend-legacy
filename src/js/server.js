@@ -14,17 +14,16 @@ app.get("/db", async (req, res) => {
   const client = new MongoClient(MONGO_DB_URI)
   try {
     await client.connect()
-    const dbs = await client.db().admin().listDatabases()
-    const collections = await client.db().collections()
-    console.table(collections)
-    collections.map(collection => console.log(collection))
-    
+    const myMatch = await client
+      .db("qatar-2022")
+      .collection("matches")
+      .findOne({ id: 1 })
+    res.send(myMatch)
   } catch (error) {
     console.log(error)
   } finally {
     await client.close()
   }
-  res.send("Hello from DB.")
 })
 
 app.get("/assists", async (req, res) => {
@@ -39,7 +38,8 @@ app.get("/assists", async (req, res) => {
       "div.portfolio",
       "div.box",
       "div",
-    ])).html()
+    ]),
+  ).html()
 
   const trs = $(
     selectors([
