@@ -1,16 +1,16 @@
-import express from "express"
+import express, { Express, Request, Response } from "express"
 import * as cheerio from "cheerio"
-import { fetchAssistsPage } from "./assists.js"
-import { normalizeString, selectors } from "./utils.js"
+import { fetchAssistsPage } from "./assists"
+import { normalizeString, selectors } from "./utils"
 import { MongoClient } from "mongodb"
 
-const app = express()
+const app: Express = express()
 const port = process.env.PORT || 3000
 
-app.get("/", (req, res) => res.send("Hello World"))
+app.get("/", (req: Request, res: Response) => res.send("Hello World"))
 
-app.get("/db", async (req, res) => {
-  const MONGO_DB_URI = process.env.MONGO_URL
+app.get("/db", async (req: Request, res: Response) => {
+  const MONGO_DB_URI = process.env.MONGO_URL ?? ""
   const client = new MongoClient(MONGO_DB_URI)
   try {
     await client.connect()
@@ -26,7 +26,7 @@ app.get("/db", async (req, res) => {
   }
 })
 
-app.get("/assists", async (req, res) => {
+app.get("/assists", async (req: Request, res: Response) => {
   const assistsPage = await fetchAssistsPage()
   const $ = cheerio.load(assistsPage)
 
