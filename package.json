@@ -10,11 +10,12 @@
   "scripts": {
     "start": "node dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "login": "$npm_package_config_railway login",
-    "logout": "$npm_package_config_railway logout",
+    "login": "railway login",
+    "logout": "railway logout",
     "build": "tsc",
-    "dev": "$npm_package_config_railway run $npm_package_config_nodemon ./src/js/server.ts",
-    "initialize-db": "$npm_package_config_railway run ./scripts/initialize-db.sh"
+    "predev": "npm run login",
+    "dev": "railway run nodemon ./src/js/server.ts",
+    "initialize-db": "railway run ./scripts/initialize-db.sh"
   },
   "repository": {
     "type": "",
