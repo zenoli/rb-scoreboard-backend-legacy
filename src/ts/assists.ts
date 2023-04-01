@@ -1,3 +1,7 @@
+import * as cheerio from "cheerio"
+import { normalizeString, selectors } from "./utils";
+import { Assist } from "./models/assist";
+
 export async function fetchAssistsPage() {
   const normalized = "Dušan Tadić"
     .normalize("NFD")
@@ -26,4 +30,33 @@ export async function fetchAssistsPage() {
     },
   )
   return await response.text()
+}
+
+export function extractAssistsFromDocument(assistsPage: string): Assist[] {
+  const $ = cheerio.load(assistsPage);
+
+  const trs = $(
+    selectors([
+      "#site",
+      "div.white",
+      "div.content",
+      "div.portfolio",
+      "div.box",
+      "div",
+      "table",
+      "tbody",
+      "tr",
+    ])
+  );
+
+  const parsedAssists: Assist[] = $(trs)
+    .map((_, e) => {
+      const tds = $(e).find("td");
+      const name = normalizeString($(tds[1]).text());
+      const assists = +$(tds[5]).text();
+      return { name, assists };
+    })
+    .get()
+    .filter((_, i) => i);
+  return parsedAssists
 }

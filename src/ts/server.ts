@@ -1,8 +1,9 @@
 import express, { Express, Request, Response } from "express";
 import * as cheerio from "cheerio";
-import { fetchAssistsPage } from "./assists";
-import { normalizeString, selectors } from "./utils";
+import { extractAssistsFromDocument, fetchAssistsPage } from "./assists";
 import { MongoClient } from "mongodb";
+import { Assist } from "./models/assist";
+import { setAssists } from "./services/db-service";
 
 const app: Express = express();
 const port = process.env.PORT || 3000;
@@ -26,47 +27,11 @@ app.get("/db", async (req: Request, res: Response) => {
   }
 });
 
-app.get("/assists", async (req: Request, res: Response) => {
+app.get("/assists", async (req: Request, res: Response<Assist[]>) => {
   const assistsPage = await fetchAssistsPage();
-  const $ = cheerio.load(assistsPage);
-
-  const table = $(
-    selectors([
-      "#site",
-      "div.white",
-      "div.content",
-      "div.portfolio",
-      "div.box",
-      "div",
-    ])
-  ).html();
-
-  const trs = $(
-    selectors([
-      "#site",
-      "div.white",
-      "div.content",
-      "div.portfolio",
-      "div.box",
-      "div",
-      "table",
-      "tbody",
-      "tr",
-    ])
-  );
-  console.log("assists hit");
-
-  const parsedAssists = $(trs)
-    .map((_, e) => {
-      const tds = $(e).find("td");
-      const name = normalizeString($(tds[1]).text());
-      const assists = $(tds[5]).text();
-      return { name, assists };
-    })
-    .get()
-    .filter((_, i) => i);
-
-  res.send(parsedAssists);
+  const assists: Assist[] = extractAssistsFromDocument(assistsPage)
+  setAssists(assists)
+  res.send(assists)
 });
 
 app.listen(port, () => {
