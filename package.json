@@ -2,7 +2,7 @@
   "name": "world-cup-stats",
   "version": "1.0.0",
   "description": "Scraper for stats of world cup qatar 2022",
-  "main": "./src/ts/server.ts",
+  "main": "./src/server.ts",
   "config": {
     "railway": "./node_modules/@railway/cli/bin/railway",
     "nodemon": "./node_modules/nodemon/bin/nodemon.js"
@@ -13,8 +13,8 @@
     "login": "railway login",
     "logout": "railway logout",
     "build": "tsc",
-    "dev": "railway run nodemon ./src/ts/server.ts",
-    "debug": "nodemon --exec 'node --inspect=0.0.0.0:9229 --require ts-node/register src/ts/server.ts'",
+    "dev": "railway run nodemon ./src/server.ts",
+    "debug": "nodemon --exec 'node --inspect=0.0.0.0:9229 --require ts-node/register src/server.ts'",
     "initialize-db": "railway run ./scripts/initialize-db.sh"
   },
   "repository": {

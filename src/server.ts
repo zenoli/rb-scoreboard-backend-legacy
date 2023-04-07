@@ -1,6 +1,5 @@
 import express, { Express, Request, Response } from "express";
-import * as cheerio from "cheerio";
-import { extractAssistsFromDocument, fetchAssistsPage } from "./assists";
+import { extractAssistsFromDocument, fetchAssistsPage } from "./routes/assists";
 import { MongoClient } from "mongodb";
 import { Assist } from "./models/assist";
 import { setAssists } from "./services/db-service";

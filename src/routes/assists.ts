@@ -1,6 +1,6 @@
 import * as cheerio from "cheerio"
-import { normalizeString, selectors } from "./utils";
-import { Assist } from "./models/assist";
+import { normalizeString, selectors } from "../utils/utils";
+import { Assist } from "../models/assist";
 
 export async function fetchAssistsPage() {
   const normalized = "Dušan Tadić"
