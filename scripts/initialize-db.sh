@@ -11,14 +11,18 @@ fi
 echo "Initializing mongoDB (using mongoimport) from file:"
 echo "$json_location:"
 
+if [[ -f .env ]]; then
+  echo ".env file found. Loading environemnt variables"
+  export $(echo $(cat .env | sed 's/#.*//g'| xargs) | envsubst)
+fi
 
 echo "Starting import..."
+
 mongoimport \
-    --host="$MONGOHOST" \
-    --port="$MONGOPORT" \
+    --uri "mongodb+srv://${MONGOHOST}" \
     --username="$MONGOUSER" \
     --password="$MONGOPASSWORD" \
-    --db "qatar-2022" \
+    --db="qatar-2022" \
     --collection "matches" \
     --file "$json_location" \
     --authenticationDatabase="admin" \
