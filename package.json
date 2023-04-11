@@ -12,7 +12,7 @@
     "dev": "nodemon ./src/server.ts",
     "dev-local-db": "nodemon ./src/server.ts",
     "debug": "nodemon --exec 'node --inspect=0.0.0.0:9229 --require ts-node/register src/server.ts'",
-    "initialize-db": "railway run ./scripts/initialize-db.sh"
+    "initialize-db": "./scripts/initialize-db.sh"
   },
   "repository": {
     "type": "",
