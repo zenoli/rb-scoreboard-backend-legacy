@@ -1,13 +1,8 @@
 import { MongoClient } from "mongodb"
-import { Assist } from "../models/assist"
 
-let client: MongoClient
+const client = new MongoClient(process.env.MONGO_URL ?? "").connect()
 
 export async function getDb() {
-  if (!client) {
-    console.log("CONNECTING TO: ", process.env.MONGO_URL)
-    client = await new MongoClient(process.env.MONGO_URL ?? "").connect()
-  }
-  return client.db("qatar-2022")
+  return (await client).db("qatar-2022")
 }
 
