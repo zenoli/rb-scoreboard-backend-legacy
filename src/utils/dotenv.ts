@@ -1,7 +1,8 @@
 import * as dotenv from "dotenv"
 import * as dotenvExpand from "dotenv-expand"
 
-export default function() {
+function init() {
   dotenv.config()
   dotenvExpand.expand(dotenv.config())
 }
+ init()

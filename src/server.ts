@@ -1,6 +1,4 @@
-import dotenvInit from "./utils/dotenv"
-dotenvInit()
-
+import "./utils/dotenv"
 import express, { Express, Request, Response } from "express"
 import AssistRouter from "./routes/assists.route"
 import MatchRouter from "./routes/matches.route"
