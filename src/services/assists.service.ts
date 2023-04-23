@@ -1,12 +1,11 @@
 import * as cheerio from "cheerio"
 import { normalizeString, selectors } from "../utils/utils"
-import { Assist } from "../models/assist"
+import { Assist } from "../types/assist"
 import scraperConfig from "../resources/assist-scraper-config.json"
-import { getDb } from "./db-service"
+import { Db } from "mongodb"
 
-export async function updateAssists() {
+export async function updateAssists(db: Db) {
   const assists = await getAssistFromWebPage()
-  const db = await getDb()
   const collection = db.collection<Assist>("assists")
   // collection.drop()
   await collection.bulkWrite(
@@ -68,16 +67,13 @@ function extractAssistsFromDocument(assistsPage: string): Assist[] {
   return parsedAssists
 }
 
-export async function getAssists() {
-  const db = await getDb()
+export async function getAssists(db: Db) {
   const collection = db.collection<Assist>("assists")
   return await collection.find({}).toArray()
 }
 
-export async function getAssistsStream() {
-  const db = await getDb()
+export async function getAssistsStream(db: Db) {
   const collection = db.collection<Assist>("assists")
-
   const changeStream = collection.watch([], { fullDocument: "updateLookup" })
   return changeStream
 }
