@@ -1,5 +1,5 @@
 import { Db, MongoClient } from "mongodb"
-import { withService } from "../injectors/injector"
+import { withService } from "@injectors/injector"
 import { InjectedRouteFunc } from "../types/express"
 
 const client = new MongoClient(process.env.MONGO_URL ?? "").connect()

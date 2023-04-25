@@ -4,8 +4,7 @@
   "description": "Scraper for stats of world cup qatar 2022",
   "main": "./src/server.ts",
   "scripts": {
-    "start": "node dist/server.js",
-    "startNew": "node -r ts-node/register/transpile-only -r tsconfig-paths/register dist/server.js",
+    "start": "TS_NODE_BASEURL=./dist node -r tsconfig-paths/register dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "login": "railway login",
     "logout": "railway logout",
@@ -36,7 +35,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "nodemon": "^2.0.22",
     "ts-node": "^10.9.1",
-    "tsconfig-paths": "^4.2.0"
+    "typescript": "^5.0.4"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.12",
@@ -46,6 +45,6 @@
     "mongodb": "^5.1.0",
     "morgan": "^1.10.0",
     "pretty": "^2.0.0",
-    "tsx": "^3.12.6"
+    "tsconfig-paths": "^4.2.0"
   }
 }
