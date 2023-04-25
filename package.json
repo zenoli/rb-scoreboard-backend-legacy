@@ -10,7 +10,8 @@
     "logout": "railway logout",
     "build": "tsc",
     "dev": "nodemon --require tsconfig-paths/register ./src/server.ts",
-    "debug": "nodemon --exec 'node --inspect=0.0.0.0:9229 --require tsconfig-paths/register --require ts-node/register src/server.ts'",
+    "debug_old": "nodemon --exec 'node --inspect=0.0.0.0:9229 --require tsconfig-paths/register --require ts-node/register src/server.ts'",
+    "debug": "scripts/debug.sh",
     "initialize-db": "./scripts/initialize-db.sh"
   },
   "repository": {

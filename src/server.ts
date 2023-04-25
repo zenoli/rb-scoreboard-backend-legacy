@@ -14,4 +14,5 @@ app.get("/", (req: Request, res: Response) => res.send("Hell RB Scoreboard"))
 
 app.listen(port, () => {
   console.log(`Backend API started. Listening on port ${port}`)
+  console.log("Hello world!")
 })

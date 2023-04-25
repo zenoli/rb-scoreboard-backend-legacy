@@ -7,7 +7,6 @@ import { Db } from "mongodb"
 export async function updateAssists(db: Db) {
   const assists = await getAssistFromWebPage()
   const collection = db.collection<Assist>("assists")
-  // collection.drop()
   await collection.bulkWrite(
     assists.map(
       ({ name, assists }) => ({
