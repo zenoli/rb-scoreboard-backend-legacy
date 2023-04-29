@@ -4,22 +4,6 @@ import { Assist } from "../types/assist"
 import scraperConfig from "../resources/assist-scraper-config.json"
 import { Db } from "mongodb"
 
-export async function updateAssists(db: Db) {
-  const assists = await getAssistFromWebPage()
-  const collection = db.collection<Assist>("assists")
-  await collection.bulkWrite(
-    assists.map(
-      ({ name, assists }) => ({
-        updateOne: {
-          filter: { name },
-          update: { $set: { assists }},
-          upsert: true,
-        }
-      })
-    ),
-  )
-  return assists
-}
 
 async function getAssistFromWebPage(): Promise<Assist[]> {
   const assistsPage = await fetchAssistsPage()
@@ -64,6 +48,23 @@ function extractAssistsFromDocument(assistsPage: string): Assist[] {
     .get()
     .filter((_, i) => i)
   return parsedAssists
+}
+
+export async function updateAssists(db: Db) {
+  const assists = await getAssistFromWebPage()
+  const collection = db.collection<Assist>("assists")
+  await collection.bulkWrite(
+    assists.map(
+      ({ name, assists }) => ({
+        updateOne: {
+          filter: { name },
+          update: { $set: { assists }},
+          upsert: true,
+        }
+      })
+    ),
+  )
+  return assists
 }
 
 export async function getAssists(db: Db) {

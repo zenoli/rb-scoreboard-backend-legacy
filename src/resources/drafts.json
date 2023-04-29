@@ -1,0 +1,291 @@
+{
+  "QAT": {
+    "Jan": "Jassem Gaber",
+    "Julien": "Bassam Hisham",
+    "Chris": "Jassem Gaber",
+    "Faebe": "Almoez Ali",
+    "Oli":  "Hassan Alhaydos",
+    "Jakob": "Akram Afif",
+    "Joel": "Boualem Khoukhi"
+  },
+  "ECU": {
+    "Jan": "Jhegson Mendez",
+    "Julien": "Enner Valencia",
+    "Chris": "Michael Estrada",
+    "Faebe": "Angel Mena",
+    "Oli":  "Moises Caicedo",
+    "Jakob": "Alexander Dominguez",
+    "Joel": "Xavier Arreaga"
+  },
+  "NED": {
+    "Jan": "Frenkie De Jong",
+    "Julien": "Steven Bergwijn",
+    "Chris": "Matthijs De Ligt",
+    "Faebe": "Davy Klaassen",
+    "Oli":  "Virgil Van Dijk",
+    "Jakob": "Denzel Dumfries",
+    "Joel": "Memphis Depay"
+  },
+  "SEN": {
+    "Jan": "Edouard Mendy",
+    "Julien": "Sadio Mane",
+    "Chris": "Ismaila Sarr",
+    "Faebe": "Boulaye Dia",
+    "Oli":  "Abdou Diallo",
+    "Jakob": "Kalidou Koulibaly",
+    "Joel": "Idrissa Gana Gueye"
+  },
+  "ENG": {
+    "Jan": "Mason Mount",
+    "Julien": "Trent Alexander Arnold",
+    "Chris": "Harry Maguire",
+    "Faebe": "Harry Kane",
+    "Oli":  "Philip Foden",
+    "Jakob": "Jude Bellingham",
+    "Joel": "Bukayo Saka"
+  },
+  "IRN": {
+    "Jan": "Karim Ansarifard",
+    "Julien": "Mehdi Taremi",
+    "Chris": "Alireza Jahanbakhsh",
+    "Faebe": "Ali Gholizadeh",
+    "Oli":  "Sardar Azmoun",
+    "Jakob": "Saman Ghoddos",
+    "Joel": "Saman Ghoddos"
+  },
+  "USA": {
+    "Jan": "Jordan Morris",
+    "Julien": "Christian Pulisic",
+    "Chris": "Giovanni Reyna",
+    "Faebe": "Brenden Aaronson",
+    "Oli":  "Weston Mc Kennie",
+    "Jakob": "Jesus Ferreira",
+    "Joel": "Tyler  Adams"
+  },
+  "WAL": {
+    "Jan": "Brennan Johnson",
+    "Julien": "Aaron Ramsey",
+    "Chris": "Joe Allen",
+    "Faebe": "Ben Davies",
+    "Oli":  "Kieffer Moore",
+    "Jakob": "Gareth Bale",
+    "Joel": "Daniel James"
+  },
+  "ARG": {
+    "Jan": "Lionel Messi",
+    "Julien": "Lautaro Martinez",
+    "Chris": "Angel Di Maria",
+    "Faebe": "Damian Martinez",
+    "Joel": "Lisandro Martinez",
+    "Oli":  "Julian Alvarez",
+    "Jakob": "Paulo Dybala"
+  },
+  "KSA": {
+    "Jan": "Mohamed Kanno",
+    "Julien": "Hassan Altambakti",
+    "Chris": "Nasser Aldawsari",
+    "Faebe": "Saleh Alshehri",
+    "Joel": "Yasser Alshahrani",
+    "Oli":  "Salem Aldawsari",
+    "Jakob": "Saud Abdulhamid"
+  },
+  "MEX": {
+    "Jan": "Erick Gutierrez",
+    "Julien": "Guillermo Ochoa",
+    "Chris": "Henry Martin",
+    "Faebe": "Raul Jimenez",
+    "Joel": "Hector Herrera",
+    "Oli":  "Andres Guardado",
+    "Jakob": "Hirving  Lozano"
+  },
+  "POL": {
+    "Jan": "Arkadiusz Milik",
+    "Julien": "Piotr Zielinski",
+    "Chris": "Karol Swiderski",
+    "Faebe": "Krzysztof Piatek",
+    "Oli":  "Nicola Zalewski",
+    "Jakob": "Wojciech Szczesny",
+    "Joel": "Robert Lewandowski"
+  },
+  "FRA": {
+    "Jan": "Christopher Nkunku",
+    "Julien": "Hernandez Lucas",
+    "Chris": "Kylian Mbappe",
+    "Faebe": "Karim Benzema",
+    "Oli":  "Benjamin Pavard",
+    "Jakob": "Hugo Lloris",
+    "Joel": "Ousmane Dembele"
+  },
+  "AUS": {
+    "Jan": "Aaron Mooy",
+    "Julien": "Riley Mc Gree",
+    "Chris": "Mitch Duke",
+    "Faebe": "Jamie Mac Laren",
+    "Oli":  "Harry Souttar",
+    "Jakob": "Jackson Irvine",
+    "Joel": "Mathew Leckie"
+  },
+  "DEN": {
+    "Jan": "Pierre Emile Hojbjerg",
+    "Julien": "Andreas Christensen",
+    "Chris": "Martin Braithwaite",
+    "Faebe": "Andreas Skov Olsen",
+    "Oli":  "Jesper Lindstrom",
+    "Jakob": "Joakim Maehle",
+    "Joel": "Christian Eriksen"
+  },
+  "TUN": {
+    "Jan": "Ellyes Skhiri",
+    "Julien": "Mejbri Hannibal",
+    "Chris": "Seifeddine Jaziri",
+    "Faebe": "Wahbi Khazri",
+    "Oli":  "Yassine Meriah",
+    "Jakob": "Mohamed Drager",
+    "Joel": "Msakni Youssef"
+  },
+  "ESP": {
+    "Jan": "Gavi",
+    "Julien": "Pedri Gonzalez",
+    "Chris": "Unai Simon",
+    "Faebe": "Pablo Sarabia",
+    "Oli":  "Alvaro Morata",
+    "Jakob": "Rodri",
+    "Joel": "Ferran Torres"
+  },
+  "JPN": {
+    "Jan": "Kaoru Mitoma",
+    "Julien": "Kou Itakura",
+    "Chris": "Takumi Minamino",
+    "Faebe": "Junya Ito",
+    "Oli":  "Maya Yoshida",
+    "Jakob": "Daichi Kamada",
+    "Joel": "Ritsu Doan"
+  },
+  "CRC": {
+    "Jan": "Brandon Aguilera",
+    "Julien": "Jewison Bennette",
+    "Chris": "Anthony Contreras",
+    "Faebe": "Celso Borges",
+    "Oli":  "Ronald Matarrita",
+    "Jakob": "Gerson Torres",
+    "Joel": "Joel Campbell"
+  },
+  "GER": {
+    "Jan": "Leon Goretzka",
+    "Julien": "Antonio Ruediger",
+    "Chris": "Thomas Mueller",
+    "Faebe": "Gnabry Serge",
+    "Oli":  "Joshua Kimmich",
+    "Jakob": "Jamal Musiala",
+    "Joel": "Ilkay Guendogan"
+  },
+  "BEL": {
+    "Jan": "Youri Tielemans",
+    "Julien": "Thibaut Courtois",
+    "Chris": "Michy Batshuayi",
+    "Faebe": "Kevin De Bruyne",
+    "Oli":  "Eden Hazard",
+    "Jakob": "Romelu Lukaku",
+    "Joel": "Timothy Castagne"
+  },
+  "CAN": {
+    "Jan": "Alphonso Davies",
+    "Julien": "Jonathan David",
+    "Chris": "Lucas Cavallini",
+    "Faebe": "Cyle Larin",
+    "Oli":  "Stephen Eustaquio",
+    "Jakob": "Kamal Miller",
+    "Joel": "Liam Millar"
+  },
+  "MAR": {
+    "Jan": "Amine Harit",
+    "Julien": "Achraf Hakimi",
+    "Chris": "Sofiane Boufal",
+    "Faebe": "Noussair Mazraoui",
+    "Oli":  "Azzedine Ounahi",
+    "Jakob": "Selim Amallah",
+    "Joel": "Hakim Ziyech"
+  },
+  "CRO": {
+    "Jan": "Josko Gvardiol",
+    "Julien": "Mario Pasalic",
+    "Chris": "Nikola Vlasic",
+    "Faebe": "Luka Modric",
+    "Oli":  "Mateo Kovacic",
+    "Jakob": "Ivan Perisic",
+    "Joel": "Marcelo Brozovic"
+  },
+  "SUI": {
+    "Jan": "Noah Okafor",
+    "Julien": "Christian Fassnacht",
+    "Chris": "Yann Sommer",
+    "Faebe": "Breel Embolo",
+    "Oli":  "Manuel Akanji",
+    "Jakob": "Granit Xhaka",
+    "Joel": "Xherdan Shaqiri"
+  },
+  "SRB": {
+    "Jan": "Dusan Tadic",
+    "Julien": "Filip Kostic",
+    "Chris": "Sasa Lukic",
+    "Faebe": "Sergej Milinkovic Savic",
+    "Oli":  "Aleksandar Mitrovic",
+    "Jakob": "Vanja Milinkovic",
+    "Joel": "Dusan Vlahovic"
+  },
+  "BRA": {
+    "Jan": "Vinicius Jr",
+    "Julien": "Neymar",
+    "Chris": "Alisson",
+    "Faebe": "Richarlison",
+    "Oli":  "Marquinhos",
+    "Jakob": "Raphinha",
+    "Joel": "Casemiro"
+  },
+  "CMR": {
+    "Jan": "Bryan Mbeumo",
+    "Julien": "Karl Toko Ekambi",
+    "Chris": "Amadou Onana",
+    "Faebe": "Vincent Aboubakar",
+    "Oli":  "Eric Maxim Choupo Moting",
+    "Jakob": "Nicolas Ngamaleu",
+    "Joel": "Andre Frank Zambo Anguissa"
+  },
+  "URU": {
+    "Jan": "Darwin Nunez",
+    "Julien": "Edinson Cavani",
+    "Chris": "Diego Godin",
+    "Faebe": "Giorgian De Arrascaeta",
+    "Oli":  "Luis Suarez",
+    "Jakob": "Sergio Rochet",
+    "Joel": "Federico Valverde"
+  },
+  "KOR": {
+    "Jan": "Son Heungmin",
+    "Julien": "Kim Minjae",
+    "Chris": "Cho Guesung",
+    "Faebe": "Hwang Heechan",
+    "Oli":  "Lee Jaesung",
+    "Jakob": "Jeong Wooyeong",
+    "Joel": "Hwang Uijo"
+  },
+  "POR": {
+    "Jan": "Bernardo Silva",
+    "Julien": "Rui Patricio",
+    "Chris": "Joao Felix",
+    "Faebe": "Cristiano Ronaldo",
+    "Oli":  "Pepe",
+    "Jakob": "Bruno Fernandes",
+    "Joel": "Rafael Leao"
+  },
+  "GHA": {
+    "Jan": "Kamaldeen Sulemana",
+    "Julien": "Tariq Lamptey",
+    "Chris": "Inaki Williams",
+    "Faebe": "Jordan Ayew",
+    "Oli":  "Thomas Partey",
+    "Jakob": "Andre Ayew",
+    "Joel": "Kudus Mohammed"
+  }
+}
+

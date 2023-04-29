@@ -8,7 +8,15 @@ import {
 import { Router, Request, Response } from "express"
 import { withDb } from "../services/db.service"
 
+
 const router: Router = Router()
+
+router.get(
+  "/",
+  withDb(async (req: Request, res: Response, db: Db) => {
+    res.send(await getAssists(db))
+  }),
+)
 
 router.get("/stream", withDb(async (req: Request, res: Response, db: Db) => {
   const changeStream = await getAssistsStream(db)
@@ -34,11 +42,5 @@ router.post(
   }),
 )
 
-router.get(
-  "/",
-  withDb(async (req: Request, res: Response, db: Db) => {
-    res.send(await getAssists(db))
-  }),
-)
 
 export default router
