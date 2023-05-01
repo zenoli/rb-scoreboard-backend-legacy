@@ -1,6 +1,6 @@
 #!/bin/bash
 
-matches_json=${1:-"./src/resources/api-sample.json"}
+matches_json=${1:-"./src/resources/api-full.json"}
 drafts_json=${1:-"./src/resources/drafts.json"}
 
 if ! [[ -e $matches_json ]]; then
