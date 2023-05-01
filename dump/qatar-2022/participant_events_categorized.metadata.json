@@ -1,0 +1,1 @@
+{"options":{"viewOn":"participant_events","pipeline":[{"$project":{"goals":{"$filter":{"input":"$events","as":"event","cond":{"$in":["$$event.type_of_event",["goal"]]}}},"bookings":{"$filter":{"as":"event","cond":{"$in":["$$event.type_of_event",["booking"]]},"input":"$events"}}}}]},"indexes":[],"collectionName":"participant_events_categorized","type":"view"}

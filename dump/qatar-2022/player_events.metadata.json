@@ -1,0 +1,1 @@
+{"options":{"viewOn":"drafts","pipeline":[{"$lookup":{"localField":"player","foreignField":"event.player","as":"events","from":"events"}}]},"indexes":[],"collectionName":"player_events","type":"view"}
