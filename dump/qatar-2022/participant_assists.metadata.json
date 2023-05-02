@@ -1,0 +1,1 @@
+{"options":{"viewOn":"drafts","pipeline":[{"$lookup":{"from":"assists","localField":"player","foreignField":"name","as":"assists"}},{"$unwind":{"path":"$assists"}},{"$project":{"participant":{"$numberInt":"1"},"player":{"$numberInt":"1"},"assists":"$assists.assists","country":{"$numberInt":"1"}}}]},"indexes":[],"collectionName":"participant_assists","type":"view"}
