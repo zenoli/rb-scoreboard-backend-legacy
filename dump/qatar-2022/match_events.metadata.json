@@ -1,0 +1,1 @@
+{"options":{"viewOn":"events","pipeline":[{"$unionWith":{"coll":"assists","pipeline":[{"$project":{"player":"$name","assists":{"$numberInt":"1"},"_id":{"$numberInt":"0"},"type_of_event":"assist"}}]}},{"$unionWith":{"coll":"clean_sheets"}}]},"indexes":[],"collectionName":"match_events","type":"view"}

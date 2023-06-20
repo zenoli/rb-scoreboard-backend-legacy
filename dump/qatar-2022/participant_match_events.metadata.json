@@ -1,0 +1,1 @@
+{"options":{"viewOn":"drafts","pipeline":[{"$lookup":{"from":"match_events","localField":"player","foreignField":"player","as":"events"}},{"$unwind":{"path":"$events"}},{"$addFields":{"events.participant":"$participant"}},{"$replaceRoot":{"newRoot":"$events"}}]},"indexes":[],"collectionName":"participant_match_events","type":"view"}

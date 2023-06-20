@@ -2,7 +2,7 @@ import "./utils/dotenv"
 import express, { Express, Request, Response } from "express"
 import AssistRouter from "./routes/assists.route"
 import MatchRouter from "./routes/matches.route"
-import MatchEventsRouter from "./routes/match-events.route"
+import ScoresRouter from "./routes/scores.route"
 import DraftsRouter from "./routes/drafts.route"
 import morgan from "morgan"
 
@@ -13,7 +13,7 @@ app.use(morgan("tiny"))
 app.use("/assists", AssistRouter)
 app.use("/matches", MatchRouter)
 app.use("/drafts", DraftsRouter)
-app.use("/match-events", MatchEventsRouter)
+app.use("/scores", ScoresRouter)
 app.get("/", (req: Request, res: Response) => res.send("Hello RB Scoreboard"))
 
 app.listen(port, () => {
